@@ -1,0 +1,24 @@
+{
+  "name": "progra_dos_proyecto",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miataussig21/progra_dos_proyecto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miataussig21/progra_dos_proyecto/issues"
+  },
+  "homepage": "https://github.com/miataussig21/progra_dos_proyecto#readme",
+  "description": "",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.1.0",
+    "morgan": "^1.10.0"
+  }
+}
