@@ -1,6 +1,6 @@
 const controlador = {
     index: function(req, res, next) {
-        res.render('index', {title: express});
+        res.render('index', {title: "express"});
       }
 }
 

@@ -6,3 +6,5 @@ const controlador = {
         res.render('product-add', { title: 'Express' });
       },
 }
+
+module.exports = controlador;
