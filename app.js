@@ -12,6 +12,7 @@ const registerRouter = require('./routes/register')
 const profileRouter = require('./routes/profile')
 const searchRouter = require('./routes/search-results')
 
+
 var app = express();
 
 // view engine setup
@@ -31,6 +32,7 @@ app.use('/login', loginRouter)
 app.use('/register', registerRouter)
 app.use('/profile', profileRouter)
 app.use('/results', searchRouter)
+
 
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');
