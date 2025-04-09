@@ -15,47 +15,47 @@ const modulo = {
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
         }, 
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             },
         {
-        imagen: "../images/images/products/img-cafetera-mouilinex.jpg",
+        imagen: "../images/images/products/img-cafetera-moulinex.jpg",
         nombre: "Cafetera",
         descripcion: "Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe."
             }
