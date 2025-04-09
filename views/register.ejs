@@ -13,45 +13,46 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> </h2>
+			<h2 class="col-12">
+				<form action="profile.ejs" method="GET"> 
+					<div>
+						<label>Email:</label>
+						<input id="email" type="email" name="email" value="">
+					</div>
+	
+					<div>
+						<label>Usuario:</label>
+						<input id="usuario" type="text" name="usuario" value="">
+					</div>
+	
+					<div>
+						<label>Contraseña:</label>
+						<input id="Contraseña" type="contraseña" name="contraseña" value="">
+					</div>
+	
+					<div>
+						<label>Fecha de Nacimiento:</label>
+						<input id="Fecha" type="fecha" name="fecha de nacimiento" value="">
+					</div>
+	
+					<div>
+						<label>Numero de Documento:</label>
+						<input id="Numero" type="number" name="numero de documento" value="">
+					</div>
+	
+					<div>
+						<label>Numero de Documento:</label>
+						<input id="Numero" type="number" name="numero de documento" value="">
+					</div>
+	
+					<div>
+						<label>Foto de Perfil:</label>
+						<input id="Foto" type="text" name="Foto de Perfil" value="">
+					</div>
+	
+				</form>
+			 </h2>
 
-			<form action="profile.ejs" method="GET"> 
-				<div>
-					<label>Email:</label>
-					<input id="email" type="email" name="email" value="Enviar">
-				</div>
-
-				<div>
-					<label>Usuario:</label>
-					<input id="usuario" type="text" name="usuario" value="Enviar">
-				</div>
-
-				<div>
-					<label>Contraseña:</label>
-					<input id="Contraseña" type="contraseña" name="contraseña" value="Enviar">
-				</div>
-
-				<div>
-					<label>Fecha de Nacimiento:</label>
-					<input id="Fecha" type="fecha" name="fecha de nacimiento" value="Enviar">
-				</div>
-
-				<div>
-					<label>Numero de Documento:</label>
-					<input id="Numero" type="number" name="numero de documento" value="Enviar">
-				</div>
-
-				<div>
-					<label>Numero de Documento:</label>
-					<input id="Numero" type="number" name="numero de documento" value="Enviar">
-				</div>
-
-				<div>
-					<label>Foto de Perfil:</label>
-					<input id="Foto" type="text" name="Foto de Perfil" value="Enviar">
-				</div>
-
-			</form>
 
 
 <%- include("./partials/footer.ejs") %>
