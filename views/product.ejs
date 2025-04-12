@@ -6,7 +6,7 @@
 	<!-- product detail -->
 	<div class="container products-wrapper">
 		<div class="d-flex align-items-center">
-			<h2 class="products-title">Nombre del producto</h2> 
+			<h2 class="products-title"><%= Producto[4].nombre %></h2> 
 			<p class="product-detail-description">
 				<a href="/product/add">Editar</a>
 			</p>
@@ -14,9 +14,9 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src="../images/images/products/img-cafetera-moulinex.jpg" alt="" class="product-detail-img">
+					<img src=<%= Imagen[4].imagen %> alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						Cafetera Nestle Roja. Con más de 20 funciones distintas para hacer muchos tipos de cafe.</p>
+						<%= Texto[4].descripcion %></p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
