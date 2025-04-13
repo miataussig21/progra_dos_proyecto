@@ -63,27 +63,27 @@ const modulo = {
     comentarios: [
         {
             usuario: "Mia12345",
-            texto: "La cafetera tiene un diseño moderno y compacto que queda bien en cualquier cocina. Es fácil de usar y no ocupa mucho espacio.",
+            texto: "El libro me atrapó desde el primer capítulo con su forma de narrar y el misterio que plantea. Es de esos que no podés soltar.",
             imagen: "/images/images/users/chica-pelo-corto.jpg"
         }, 
         {
             usuario: "milagroshtml",
-            texto: "Calienta rápido y el café sale con buena temperatura y aroma intenso. Ideal para quienes buscan practicidad sin perder calidad.",
+            texto: "Los personajes están muy bien construidos, especialmente el protagonista, que tiene muchas capas y contradicciones.",
             imagen: "/images/images/users/chica-pelo-mas-corto.jpg"
         },
         {
             usuario: "SofiaSanmarco",
-            texto: "El sistema de carga de agua es sencillo y el depósito es transparente, lo que permite ver cuánta agua queda.",
+            texto: "La historia tiene un ritmo ágil pero también se toma el tiempo para profundizar en temas importantes.",
             imagen: "/images/images/users/chico.jpeg"
         },
         {
             usuario: "ilovebooks",
-            texto: "Tiene función de apagado automático, lo cual es un plus si sos olvidadizo o si la usás a las apuradas.",
+            texto: "Me gustó cómo mezcla lo emocional con la acción, sin que ninguna parte se sienta forzada.",
             imagen: "/images/images/users/chico-3.webp"
         },
         {
             usuario: "juanhttp",
-            texto: "Lo único mejorable es el ruido que hace al funcionar, pero en general cumple muy bien con su propósito.",
+            texto: "El final me sorprendió y dejó algunas reflexiones dando vueltas, lo cual siempre valoro en una lectura.",
             imagen: "/images/images/users/chico-dos.jpg"
         },
         
