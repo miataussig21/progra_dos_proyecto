@@ -5,7 +5,7 @@ const modulo = {
         contrasenia: "198473403",
         nacimiento: "08/02/2006",
         documento: "47890765",
-        foto: "https://previews.123rf.com/images/maiborodin/maiborodin2302/maiborodin230201320/199371163-avatar-de-icono-de-cara-vac%C3%ADa-con-ilustraci%C3%B3n-de-vector-de-pelo-rojo.jpg",
+        foto: "https://img.freepik.com/foto-gratis/retrato-expresivo-mujer-joven_1258-48167.jpg",
     },
 
     productos: {
