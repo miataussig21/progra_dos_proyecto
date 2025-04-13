@@ -12,52 +12,52 @@ const modulo = {
         detalles: [{
         imagen: "../images/images/libro1.jpg",
         nombre: "Anna & the French kiss",
-        descripcion: "Anna and the French Kiss is the 2010 debut novel of Stephanie Perkins."
+        descripcion: "Publicada en el 2010, es la novela debut de Stephanie Perkins."
         }, 
         {
         imagen: "../images/images/libro2.jpg",
         nombre: "The song of Achilles",
-        descripcion: "The Song of Achilles is a 2011 novel by American writer Madeline Miller."
+        descripcion: "Es la primera novela de la novelista y profesora estadounidense Madeline Miller."
             },
         {
         imagen: "../images/images/libro3.jpeg",
         nombre: "Pride and Prejudice",
-        descripcion: "Pride and Prejudice is the second novel by English author Jane Austen, published in 1813."
+        descripcion: "Publicada por primera vez el 28 de enero de 1813 es la más famosa de las novelas de Jane Austen"
             },
         {
         imagen: "../images/images/libro4.jpg",
         nombre: "Sense and Sensibility",
-        descripcion: "Sense and Sensibility is the first novel by the English author Jane Austen, published in 1811.."
+        descripcion: "Es la primera novela de la autora inglesa Jane Austen, publicada en 1811."
             },
         {
         imagen: "../images/images/libro5.jpeg",
         nombre: "Little Women",
-        descripcion: "Little Women is a coming-of-age novel written by American novelist Louisa May Alcott"
+        descripcion: "Es una novela sobre la mayoría de edad escrita por la novelista estadounidense Louisa May Alcott."
             },
         {
         imagen: "../images/images/libro6.jpeg",
         nombre: "Romeo and Juliet",
-        descripcion: "CThe Tragedy of Romeo and Juliet, is a tragedy written by William Shakespeare early in his career."
+        descripcion: "La tragedia de Romeo y Julieta, es una tragedia escrita por William Shakespeare al principio de su carrera.."
             },
         {
         imagen: "../images/images/libro7.jpeg",
         nombre: "Anne of Green Gables",
-        descripcion: "Anne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery"
+        descripcion: "Es una novela de 1908 de la autora canadiense Lucy Maud Montgomery"
             },
         {
         imagen: "../images/images/libro8.jpeg",
         nombre: "Six of Crows",
-        descripcion: "Six of Crows is a fantasy novel written by the Israeli–American author Leigh Bardugo"
+        descripcion: "Es una novela de fantasía escrita por la autora israelí-estadounidense Leigh Bardugo."
             },
         {
         imagen: "../images/images/libro9.jpeg",
         nombre: "The Picture of Dorian Gray",
-        descripcion: "The Picture of Dorian Gray is an 1890 philosophical fiction and gothic horror novel by Irish writer Oscar Wilde"
+        descripcion: "Es una novela de ficción filosófica y terror gótico de 1890 del escritor irlandés Oscar Wilde"
             },
         {
         imagen: "../images/images/libro10.jpeg",
         nombre: "Emma",
-        descripcion: "Emma is a novel written by English author Jane Austen."
+        descripcion: "Emma es una novela escrita por la autora inglesa Jane Austen."
             }
         ],
     comentarios: [
