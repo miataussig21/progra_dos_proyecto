@@ -10,25 +10,29 @@
 				<h2 class="products-title">Ingresar</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
+			<section class="container">
 				<form action="/profile" method="GET">
-					<div class="formulariosLogin">
-						<label>Usuario:</label>
-						<input id="usuario" type="text" name="usuario" value="">
-					</div>
-	
-					<div class="formulariosLogin">
-						<label>Contraseña:</label>
-						<input id="Contraseña" type="contraseña" name="contraseña" value="">
-					</div>
-
-					<div class="formulariosLogin">
-						<label>Recordarme:</label>
-						<input type="checkbox" name="Recordarme" value="">
-					</div>
-
-				</form>
-			</h2>
+					<div class="contact"><label class="form-text" for="usuario">Usuario:</label></div>
+                    <div class="contact">
+                        <input id="usuario" type="usuario" name="usuario" class="form-input">
+                        <div class="usuario"></div>
+                    </div>
+                    <div class="contact"><label class="form-text" for="password">Contraseña</label></div>
+                    <div class="contact">
+                        <input id="Contraseña" type="contraseña" name="contraseña" class="form-input">
+                        <div class="password"></div>
+                    </div>
+                    <div class="contact">
+                        <label class="form-text" for="usuario">Recordarme?</label>
+                    </div>
+                    <div class="contact">
+                        <input type="checkbox" name="Recordarme" value="">
+                    </div>
+					<div class="contact">
+                        <button class="send" type="submit">ENVIAR</button>
+                    </div>
+				</section>
+				
 
 
 </body>
