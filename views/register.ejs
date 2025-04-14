@@ -13,51 +13,46 @@
 				<h2 class="products-title">Registrate</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-				<form action="profile.ejs" method="GET"> 
-					<div class="contact"><label class="form-text" for="usuario">Email:</label></div>
-                    <div class="contact">
-                        <input id="email" type="email" name="email" value="" class="form-input">
-                        <div class="email"></div>
-                    </div>
+			<form action="/profile" method="GET"> 
+				<div class="contact"><label class="form-text" for="usuario">Email:</label></div>
+                <div class="contact">
+                    <input id="email" type="email" name="email" value="" class="form-input">
+                    <div class="email"></div>
+                </div>
                     
-					<div class="contact"><label class="form-text" for="password">Usuario:</label></div>
-                    <div class="contact">
-                        <input id="usuario" type="text" name="usuario" value="" class="form-input">
-                        <div class="usuario"></div>
-                    </div>
+				<div class="contact"><label class="form-text" for="password">Usuario:</label></div>
+                <div class="contact">
+                    <input id="usuario" type="text" name="usuario" value="" class="form-input">
+                    <div class="usuario"></div>
+                </div>
 					
-					<div class="contact"><label class="form-text" for="password">Contraseña:</label></div>
-                    <div class="contact">
-                        <input id="Contraseña" type="contraseña" name="contraseña" value="" class="form-input">
-                    <div class="password"></div>
+				<div class="contact"><label class="form-text" for="password">Contraseña:</label></div>
+                <div class="contact">
+                    <input id="Contraseña" type="contraseña" name="contraseña" value="" class="form-input">
+                <div class="password"></div>
 					
-					<div class="contact"><label class="form-text" for="password">Fecha de Nacimiento:</label></div>
-                    <div class="contact">
-                        <input id="Fecha" type="fecha" name="fecha de nacimiento" value="" class="form-input">
-                    <div class="fecha"></div>
+				<div class="contact"><label class="form-text" for="password">Fecha de Nacimiento:</label></div>
+                <div class="contact">
+                    <input id="Fecha" type="fecha" name="fecha de nacimiento" value="" class="form-input">
+                <div class="fecha"></div>
 					
-					<div class="contact"><label class="form-text" for="password">Numero de Documento:</label></div>
-                    <div class="contact">
-                        <input id="Numero" type="number" name="numero de documento" value="" class="form-input">
-                		<div class="fecha"></div>
+				<div class="contact"><label class="form-text" for="password">Numero de Documento:</label></div>
+                <div class="contact">
+                    <input id="Numero" type="number" name="numero de documento" value="" class="form-input">
+        		<div class="fecha"></div>
 					
-						<div class="contact"><label class="form-text" for="password">Foto:</label></div>
-                    <div class="contact">
-                        <input id="Foto" type="text" name="Foto de Perfil" value="" class="form-input">
-                    <div class="fecha"></div>
+				<div class="contact"><label class="form-text" for="password">Foto:</label></div>
+                <div class="contact">
+                    <input id="Foto" type="text" name="Foto de Perfil" value="" class="form-input">
+                <div class="fecha"></div>
                     
-					<div class="contact">
-                        <button class="send" type="submit">ENVIAR</button>
-                    </div>
+				<div class="contact">
+                    <button class="send" type="submit">ENVIAR</button>
+                </div>
 	
-				</form>
-
-			 
-
-
+			</form>
 
 <%- include("./partials/footer.ejs") %>
 
 </body>
-
 </html>
