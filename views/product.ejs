@@ -20,48 +20,18 @@
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
-						<article>
-							<img src="<%= foto[0].imagen %>" alt="">
-							<div class="data">	
-								<p class="user">
-								<strong> <a href="/profile"><%= Nombre[0].usuario %> </a> </strong>
-								 <%= texto[0].texto %></p>
-							</div>
-						</article>
-						<article>
-							<img src="<%= foto[1].imagen %>" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= Nombre[1].usuario %> </a> </strong>
-									<%= texto[1].texto %></p>
-							</div>
-						</article>
-						<article>
-							<img src="<%= foto[2].imagen %>" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= Nombre[2].usuario %>  </a> </strong>
-									<%= texto[2].texto %>
-									</p>
-							</div>
-						</article>
-						<article>
-							<img src= "<%= foto[3].imagen %>" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= Nombre[3].usuario %> </a> </strong>
-									<%= texto[3].texto %></p>
-							</div>
-						</article>
-						<article>
-							<img src="<%= foto[4].imagen %>" alt="">
-							<div class="data">
-								<p class="user">
-									<strong> <a href="/profile"><%= Nombre[4].usuario %>  </a> </strong>
-									<%= texto[4].texto %></p>
-							</div>
-						</article>
 
+							<% for( let i = 0; i < 5 ;i++ ) { %> 
+								<article class="articulo-comments">
+								<img src="<%= foto[i].imagen %>" alt="">
+								<div class="data">	
+									<p class="user">
+									<strong> <a href="/profile"><%= Nombre[i].usuario %> </a> </strong>
+									 <%= texto[i].texto %></p>
+								</div>
+							</article>
+							<% } %>
+						
 					</section>
 					<form class="form" action="" method="POST">
 						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
