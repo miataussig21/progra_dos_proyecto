@@ -10,25 +10,29 @@
 				<h2 class="products-title">Agregar productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
-			<h2 class="col-12"> 
-				<form action="/profile" method="GET">
-					<div>
-						<label>Imagen:</label>
-						<input id="imagen" class="imagen" type="file" name="Imagen" value="">
-					</div>
-	
-					<div>
-						<label>Nombre del Producto:</label>
-						<input id="Producto" type="text" name="Producto" value="">
-					</div>
-
-					<div class="">
-						<label>Descripción:</label>
-						<input id="Descripción" type="text" class="la-descripcion" name="Descripción" value="">
-					</div>
-
-				</form>
-			</h2>
+				<section class="container">
+					<form action="/profile" method="GET">
+						<div class="contact"><label class="form-text" for="imagen">Imagen:</label></div>
+						<div class="contact">
+							<input id="imagen" class="imagen" type="file" name="Imagen" value="" class="form-file">
+						   <div class="usuario"></div>
+						</div>
+						<div class="contact"><label class="form-text" for="password">Nombre del producto</label></div>
+						<div class="contact">
+							<input id="Producto" type="text" name="Producto" value="" class="form-input">
+							<div class="password"></div>
+						</div>
+						<div class="contact">
+							<label class="form-text" for="usuario">Descripcion:</label>
+						</div>
+						<div class="contact">
+							<input id="Descripción" type="text" name="Descripción" value="" class="form-input">
+						</div>
+						<div class="contact">
+							<button class="send" type="submit">ENVIAR</button>
+						</div>
+					</form>
+				</section>
 
 
 <%- include("./partials/footer.ejs") %>
