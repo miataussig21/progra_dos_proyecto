@@ -14,62 +14,44 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 				<form action="profile.ejs" method="GET"> 
-					<div class="formulariosRegister">
-						<label>Email:</label>
-						<input id="email" type="email" name="email" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Usuario:</label>
-						<input id="usuario" type="text" name="usuario" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Contraseña:</label>
-						<input id="Contraseña" type="contraseña" name="contraseña" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Fecha de Nacimiento:</label>
-						<input id="Fecha" type="fecha" name="fecha de nacimiento" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Numero de Documento:</label>
-						<input id="Numero" type="number" name="numero de documento" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Numero de Documento:</label>
-						<input id="Numero" type="number" name="numero de documento" value="">
-					</div>
-	
-					<div class="formulariosRegister">
-						<label>Foto de Perfil:</label>
-						<input id="Foto" type="text" name="Foto de Perfil" value="">
-					</div>
-	
-				</form>
-
-				<div class="contact"><label class="form-text" for="usuario">Email:</label></div>
+					<div class="contact"><label class="form-text" for="usuario">Email:</label></div>
                     <div class="contact">
-                        <input id="usuario" type="usuario" name="usuario" class="form-input">
+                        <input id="email" type="email" name="email" value="" class="form-input">
+                        <div class="email"></div>
+                    </div>
+                    
+					<div class="contact"><label class="form-text" for="password">Usuario:</label></div>
+                    <div class="contact">
+                        <input id="usuario" type="text" name="usuario" value="" class="form-input">
                         <div class="usuario"></div>
                     </div>
-                    <div class="contact"><label class="form-text" for="password">Contraseña</label></div>
+					
+					<div class="contact"><label class="form-text" for="password">Contraseña:</label></div>
                     <div class="contact">
-                        <input id="Contraseña" type="contraseña" name="contraseña" class="form-input">
-                        <div class="password"></div>
-                    </div>
+                        <input id="Contraseña" type="contraseña" name="contraseña" value="" class="form-input">
+                    <div class="password"></div>
+					
+					<div class="contact"><label class="form-text" for="password">Fecha de Nacimiento:</label></div>
                     <div class="contact">
-                        <label class="form-text" for="usuario">Recordarme?</label>
-                    </div>
+                        <input id="Fecha" type="fecha" name="fecha de nacimiento" value="" class="form-input">
+                    <div class="fecha"></div>
+					
+					<div class="contact"><label class="form-text" for="password">Numero de Documento:</label></div>
                     <div class="contact">
-                        <input type="checkbox" name="Recordarme" value="">
-                    </div>
+                        <input id="Numero" type="number" name="numero de documento" value="" class="form-input">
+                		<div class="fecha"></div>
+					
+						<div class="contact"><label class="form-text" for="password">Foto:</label></div>
+                    <div class="contact">
+                        <input id="Foto" type="text" name="Foto de Perfil" value="" class="form-input">
+                    <div class="fecha"></div>
+                    
 					<div class="contact">
                         <button class="send" type="submit">ENVIAR</button>
                     </div>
+	
+				</form>
+
 			 
 
 
