@@ -465,6 +465,13 @@ textarea.form-input {
   height: 20px;
 }
 
+.form-text {
+  font-size: 15px;
+}
+
+.send {
+  margin-top: 10px;
+}
 
 /*====== Profile ======*/
 .info-usuario{
