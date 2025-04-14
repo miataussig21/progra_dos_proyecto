@@ -15,64 +15,28 @@
 				<h2 class="products-title">Productos</h2>
 			</div>
 			<!-- Show the "ultimos" products -->
+			<% for( let i = 0; i < 4; i++ ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/product">
 						<figure class="product-box_image">
-							<img src=<%= Imagen[0].imagen %> alt="cafetera moulinex">
+							<img src=<%= Imagen[i].imagen %> alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2><%= Nombre[0].nombre %></h2>
-							<p><%= Texto[0].descripcion %></p>
+							<h2><%= Nombre[i].nombre %></h2>
+							<p><%= Texto[i].descripcion %></p>
 							<p>Comentarios: 12</p>
-						</article>
-					</a>
+							
+						</article> 
+					
+					</a> 
 				</section>
 			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src=<%= Imagen[4].imagen %> alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= Nombre[4].nombre %></h2>
-							<p><%= Texto[4].descripcion %></p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src=<%= Imagen[3].imagen %> alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= Nombre[3].nombre %></h2>
-							<p><%= Texto[3].descripcion %></p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
-			<div class="col-12 col-sm-6 col-lg-3">
-				<section class="product-box">
-					<a href="/product">
-						<figure class="product-box_image">
-							<img src=<%= Imagen[9].imagen %> alt="cafetera moulinex">
-						</figure>
-						<article class="product-box_data">
-							<h2><%= Nombre[9].nombre %></h2>
-							<p><%= Texto[9].descripcion %></p>
-							<p>Comentarios: 12</p>
-						</article>
-					</a>
-				</section>
-			</div>
+			<% } %>
 		</div>
+		
 	</div>
+
 </body>	
 
 <%- include("./partials/footer.ejs") %>
