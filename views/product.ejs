@@ -14,20 +14,20 @@
 		<div class="product-detail">
 			<div class="row">
 				<article class="col-12 col-lg-8 product-detail-info">
-					<img src=<%= Imagen[4].imagen %> alt="" class="product-detail-img">
+					<img src=<%= Producto[4].imagen %> alt="" class="product-detail-img">
 					<p class="product-detail-description">
-						<%= Texto[4].descripcion %></p>
+						<%= Producto[4].descripcion %></p>
 				</article>
 				<div class="col-12 col-lg-4">
 					<section class="comments">
 
 							<% for( let i = 0; i < 5 ;i++ ) { %> 
 								<article class="articulo-comments">
-								<img src="<%= foto[i].imagen %>" alt="">
+								<img src="<%= comment[i].imagen %>" alt="">
 								<div class="data">	
 									<p class="user">
-									<strong> <a href="/profile"><%= Nombre[i].usuario %> </a> </strong>
-									 <%= texto[i].texto %></p>
+									<strong> <a href="/profile"><%= comment[i].usuario %> </a> </strong>
+									 <%= comment[i].texto %></p>
 								</div>
 							</article>
 							<% } %>
