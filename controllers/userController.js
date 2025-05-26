@@ -5,7 +5,7 @@ const controlador = {
     login: function(req,res){
         res.render('login');
     }, 
-    
+
     process: function(req, res){
         db.Usuario.findOne({
             where: [{email: req.body.email}]
@@ -46,15 +46,12 @@ const controlador = {
         db.Usuario.create({
             name: req.body.usuario,
             email: req.body.email,
-            contrasenia: req.body.contraseña,
+            contrasenia: bcrypt.hashSync(req.body.contraseña, 10),
             fecha_de_nacimiento: req.body.fecha,
         })
         .then(function(user){
             if(user != undefined){
                 res.redirect("/login")
-            } else (
-                res.send("Error")
-            )
         })
 
     },
