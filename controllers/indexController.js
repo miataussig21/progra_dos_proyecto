@@ -1,4 +1,5 @@
 const modulo = require('../db/modulo')
+const db = require("../database/models")
 
 const controlador = {
     index: function(req, res, next) {
