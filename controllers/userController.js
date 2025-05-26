@@ -52,7 +52,7 @@ const controlador = {
         .then(function(user){
             if(user != undefined){
                 res.redirect("/login")
-        })
+        }})
 
     },
     profile: function(req,res){
