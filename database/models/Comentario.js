@@ -14,10 +14,10 @@ module.exports = function(sequelize, dataTypes){
         comentario: {
             type: dataTypes.STRING
         },
-        created_at: {
+        createdAt: {
             type: dataTypes.DATE
         },
-        updated_at: {
+        updatedAt: {
 	        type: dataTypes.DATE
         },
     };

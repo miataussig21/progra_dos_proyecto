@@ -23,10 +23,10 @@ module.exports = function (sequelize, dataTypes ) {
     foto: {
         type : dataTypes.STRING
         },
-    created_at: {
+    createdAt: {
         type: dataTypes.DATE
         },
-    updated_at: {
+    updatedAt: {
         type: dataTypes.DATE
         },
 
@@ -39,18 +39,18 @@ module.exports = function (sequelize, dataTypes ) {
     let config = {
     tableName: "usuarios",
     timestamps: false,
-    underscored: true
+    underscored: false
     }
     let Usuario = sequelize.define(alias, cols, config);
     Usuario.associate = function(models){
     Usuario.hasMany(models.Comentario, {
         as:'relacion_uc',
-        foregin_key: 'comentario_id'
+        foregin_key: 'usuarios_id'
     })
 
-    Usuario.belongsTo(models.Producto, {
+    Usuario.hasMany(models.Producto, {
     as: 'relacion_up',
-    foreignKey: 'producto_id'
+    foreignKey: 'usuarios_id'
     })
     
     

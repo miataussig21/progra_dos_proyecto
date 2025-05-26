@@ -51,9 +51,8 @@ const controlador = {
             fecha_de_nacimiento: req.body.fecha,
         })
         .then(function(user){
-            if(user != undefined){
-                res.redirect("/login")
-        }})
+            res.redirect("/login")
+        })
 
     },
     profile: function(req,res){

@@ -15,10 +15,10 @@ module.exports = function(sequelize, dataTypes){
         descripcion:{
             type: dataTypes.STRING
         },
-        created_at: {
+        createdAt: {
 	        type: dataTypes.DATE
         },
-        updated_at: {
+        updatedAt: {
 	        type: dataTypes.DATE
         },
         usuarios_id: {
@@ -34,7 +34,7 @@ module.exports = function(sequelize, dataTypes){
 
         let Producto = sequelize.define(alias, cols, config);
         Producto.associate = function(models){
-            Producto.hasMany(models.Usuario,{
+            Producto.belongsTo(models.Usuario,{
                 as: "relacion_pu",
                 foreignKey: "usuarios_id"
             })
