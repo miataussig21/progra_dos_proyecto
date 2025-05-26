@@ -5,6 +5,7 @@ const controlador = {
     login: function(req,res){
         res.render('login');
     }, 
+    
     process: function(req, res){
         db.Usuario.findOne({
             where: [{email: req.body.email}]
@@ -22,12 +23,38 @@ const controlador = {
     register: function(req,res){
         res.render('register');
     }, 
+
     create: function(req, res){
+        if (req.body.email == ""){
+            res.send("Completar el campo vacio")
+        }
+        if (req.body.contraseña < 3){
+            res.send("La contraseña debe tener al menos 3 caracteres")
+        }
+        if (req.body.contraseña == ""){
+            res.send("Completar el campo vacio")
+        }
+
+        db.Usuario.findOne({
+            where: [{email: req.body.email}]
+        })
+        .then(function(result){
+            if(result != null){
+                res.send("Ese email ya esta registrado")
+            }
+        })
         db.Usuario.create({
             name: req.body.usuario,
             email: req.body.email,
             contrasenia: req.body.contraseña,
             fecha_de_nacimiento: req.body.fecha,
+        })
+        .then(function(user){
+            if(user != undefined){
+                res.redirect("/login")
+            } else (
+                res.send("Error")
+            )
         })
 
     },
