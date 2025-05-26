@@ -1,5 +1,6 @@
-
 const modulo = require("../db/modulo")
+const db = require("../database/models")
+
 const controlador = {
     login: function(req,res){
         res.render('login');
