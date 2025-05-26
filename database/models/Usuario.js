@@ -54,7 +54,7 @@ module.exports = function (sequelize, dataTypes ) {
     })
     
     
-    }
-    return Usuario;
-   }
+    }  
+    return Usuario; 
+}
  
