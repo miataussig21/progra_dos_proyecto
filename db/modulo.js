@@ -13,6 +13,7 @@ const modulo = {
         imagen: "../images/images/libro1.jpg",
         nombre: "Anna & the French kiss",
         descripcion: "Publicada en el 2010, es la novela debut de Stephanie Perkins."
+        
         }, 
         {
         imagen: "../images/images/libro2.jpg",
@@ -91,9 +92,4 @@ const modulo = {
 
 
 }}
-
-
-
-
-
 module.exports = modulo; 

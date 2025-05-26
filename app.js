@@ -31,7 +31,7 @@ app.use('/results', searchRouter)
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');
 });
-
+ 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
