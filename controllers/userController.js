@@ -28,6 +28,11 @@ const controlador = {
         })
     },
 
+    logout: function(req, res){
+        req.session.destroy();
+        res.redirect('/')
+    },
+
     register: function(req,res){
         res.render('register');
     }, 
