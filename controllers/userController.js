@@ -12,8 +12,13 @@ const controlador = {
             where: [{email: req.body.email}]
         })
         .then(function(usuario){
-            if(usuario != undefined){
-                res.redirect('/login')
+            if(usuario != null){
+                let check = bcrypt.compareSync(req.body.contraseña, usuario.contrasenia)
+                if (check == True){
+                    res.redirect('/')
+                } else {
+                    res.send("La contraseña es incorrecta")
+                }
             } else {
                 res.send("No se encontro su email")
             }
