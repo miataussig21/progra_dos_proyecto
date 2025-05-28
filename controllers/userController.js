@@ -13,8 +13,8 @@ const controlador = {
         })
         .then(function(usuario){
             if(usuario != null){
-                let check = bcrypt.compareSync(req.body.contraseña, usuario.contrasenia)
-                if (check == True){
+                let check = bcrypt.compareSync(req.body.contraseña, usuario.contraseña)
+                if (check == true){
                     res.redirect('/')
                 } else {
                     res.send("La contraseña es incorrecta")
@@ -52,7 +52,7 @@ const controlador = {
         db.Usuario.create({
             name: req.body.usuario,
             email: req.body.email,
-            contrasenia: bcrypt.hashSync(req.body.contraseña, 10),
+            contraseña: bcrypt.hashSync(req.body.contraseña, 10),
             fecha_de_nacimiento: req.body.fecha,
         })
         .then(function(user){
