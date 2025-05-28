@@ -25,7 +25,6 @@ const controlador = {
         })
     },
 
-
     register: function(req,res){
         res.render('register');
     }, 
