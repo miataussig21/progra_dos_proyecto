@@ -15,7 +15,7 @@ const controlador = {
             if(usuario != undefined){
                 res.redirect('/login')
             } else {
-                res.send("ERROR")
+                res.send("No se encontro su email")
             }
         })
     },
