@@ -16,6 +16,9 @@ const controlador = {
                 let check = bcrypt.compareSync(req.body.contraseña, usuario.contraseña)
                 if (check == true){
                     res.redirect('/')
+                    if (req.body.Recordarme){
+                        req.session.user = usuario;
+                    }
                 } else {
                     res.send("La contraseña es incorrecta")
                 }
