@@ -38,6 +38,7 @@ const controlador = {
     }, 
 
     create: function(req, res){
+
         if (req.body.email == ""){
             res.send("Completar el campo vacio")
         }
