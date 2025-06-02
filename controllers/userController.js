@@ -2,6 +2,7 @@ const modulo = require("../db/modulo")
 const db = require("../database/models")
 const bcrypt = require('bcryptjs')
 
+
 const controlador = {
     login: function(req,res){
         res.render('login');
@@ -72,7 +73,18 @@ const controlador = {
 
     },
     profile: function(req,res){
-        res.render('profile', {Nombre: modulo.usuario.usuario, Email: modulo.usuario.email, Foto:modulo.usuario.foto, Producto: modulo.productos.detalles, Imagen: modulo.productos.detalles, Texto: modulo.productos.detalles});
+        db.Producto.findAll({
+            where: {usuarios_id: req.sessions.usuarios.id
+            }
+            .then(function(productos) {
+
+                res.render('profile', {productos_encontrados: productos})
+            })
+
+
+        })
+
+        res.render('profile', {Nombre: modulo.usuario, Email: modulo.usuario, Foto:modulo.usuario, Producto: modulo.productos, Imagen: modulo.productos.detalles, Texto: modulo.productos.detalles});
     }
 
 }
