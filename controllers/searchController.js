@@ -8,7 +8,13 @@ const controlador = {
             where: [{producto: {[op.like]:  `%${req.query.search}%`}}]
         })
         .then(function(result){
-            res.render("search-results", {Muestra: result})
+            if(result.length === 0){
+            res.send("No hay resultados para su criterio de búsqueda")
+            }
+            else{
+                 res.render("search-results", {Muestra: result})
+            }
+            
         })
     }
 }
