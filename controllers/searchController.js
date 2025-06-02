@@ -5,10 +5,9 @@ const op = db.Sequelize.Op;
 const controlador = {
     search: function(req,res){
         db.Producto.findAll({
-            where: [{producto: {[op.like]: "%req.query.search_query%"}}]
+            where: [{producto: {[op.like]:  `%${req.query.search}%`}}]
         })
         .then(function(result){
-            db.Producto
             res.render("search-results", {Muestra: result})
         })
     }
