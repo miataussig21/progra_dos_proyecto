@@ -8,7 +8,6 @@ const controlador = {
 
     db.Producto.findByPk(producto)
     .then(function(result){
-      // return res.send(result)
       res.render('product', {producto: result, comment: modulo.productos.comentarios});
     })
   },
