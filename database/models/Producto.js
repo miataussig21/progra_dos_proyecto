@@ -43,6 +43,8 @@ module.exports = function(sequelize, dataTypes){
             as: "relacion_pc",
             foreignKey: "producto_id"
             })
+        }
+        
         };
         return Producto;
 
