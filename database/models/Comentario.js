@@ -8,8 +8,9 @@ module.exports = function(sequelize, dataTypes){
         producto_id: {
             type: dataTypes.INTEGER
         },
-        usuario_id: {
-            type: dataTypes.INTEGER
+        usuarios_id: {
+            type: dataTypes.INTEGER,
+            
         },
         comentario: {
             type: dataTypes.STRING
@@ -25,6 +26,7 @@ module.exports = function(sequelize, dataTypes){
     let config = {
         tableName: "comentarios",
         timestamps: false,
+
     };
 
     let Comentario = sequelize.define(alias, cols, config);
@@ -32,9 +34,7 @@ module.exports = function(sequelize, dataTypes){
             Comentario.belongsTo(models.Usuario, {
             as: "relacion_cu",
             foreignKey: "usuarios_id"
-        })};
-
-        Comentario.associate = function(models){
+        }),
             Comentario.belongsTo(models.Producto, {
             as: "relacion_cp",
             foreignKey: "producto_id"

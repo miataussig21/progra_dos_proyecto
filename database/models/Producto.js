@@ -30,6 +30,7 @@ module.exports = function(sequelize, dataTypes){
         let config = {
         tableName: "productos",
         timestamps: false,
+
         }
 
         let Producto = sequelize.define(alias, cols, config);
@@ -37,11 +38,7 @@ module.exports = function(sequelize, dataTypes){
             Producto.belongsTo(models.Usuario,{
                 as: "relacion_pu",
                 foreignKey: "usuarios_id"
-            })
-            return Producto
-        }
-
-         Producto.associate = function(models){
+            }),
             Producto.hasMany(models.Comentario, {
             as: "relacion_pc",
             foreignKey: "producto_id"

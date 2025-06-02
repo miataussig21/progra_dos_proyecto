@@ -7,11 +7,11 @@
 	<section class="info-usuario container products-wrapper">
 		<div class="row">
 			<div class="img-container offset-3 col-2">
-				<img src=<%= Foto.foto %> alt="foto de perfil" class="foto-perfil">
+				<img src=<%= usario.foto %> alt="foto de perfil" class="foto-perfil">
 			</div>
 			<div class="data-container col-6">
 				<div class="d-flex align-items-center ">
-					<h1 class="main-title"> <%= Nombre.usuario %>
+					<h1 class="main-title"> <%= usuario.email %>
 						<a href="profile-edit.html">  <!-- no hicimos profile edit -->
 							<i class="fas fa-cog"></i>
 						</a>
@@ -20,8 +20,8 @@
 				</div>
 				<div>
 					<ul class="info-del-usuario">
-						<li> <%= Email.email %> </li>
-						<li> <%= productos_encontrados.length %></li>
+						<li> <%= usuario.email %> </li>
+						<li> <%= usuario.relacion_up.length %></li>
 						<li>200 seguidores</li>
 						<li>300 comentarios</li>
 					</ul>
@@ -38,16 +38,16 @@
 				<h2 class="products-title">Mis productos</h2>
 			</div>
 			<!-- Show mis productos -->
-			<% for( let i = 0; i < 10; i++ ) { %>
+			<% for( let i = 0; i < usuario.relacion_up.length; i++ ) { %>
 			<div class="col-12 col-sm-6 col-lg-3">
 				<section class="product-box">
 					<a href="/product">
 						<figure class="product-box_image">
-							<img src=<%= Imagen[i].imagen %> alt="cafetera moulinex">
+							<img src=<%= usuario.relacion_up[i].imagen %> alt="cafetera moulinex">
 						</figure>
 						<article class="product-box_data">
-							<h2><%= Producto.detalles[i].nombre %></h2>
-							<p><%= Texto[i].descripcion %></p>
+							<h2><%= usuario.relacion_up[i].producto %></h2>
+							<p><%= usuario.relacion_up[i].descripcion %> </p>
 							<p>Comentarios: 12</p>
 						</article>
 					</a>

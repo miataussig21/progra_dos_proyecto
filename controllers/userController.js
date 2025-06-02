@@ -1,6 +1,6 @@
 const modulo = require("../db/modulo")
 const db = require("../database/models")
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 
 
 const controlador = {
@@ -76,20 +76,14 @@ const controlador = {
 
     },
     profile: function(req,res){
-        db.Producto.findAll({
-            where: [{usuarios_id: req.session.user.id}]
+        db.Usuario.findByPk(req.params.id,{
+            include: [{
+                association: "relacion_up"
+            }]
             
             })
-            .then(function(productos) {
-                res.render('profile', {productos_encontrados: productos,
-                    Nombre: req.session.user.email,
-                    Email: req.session.email,
-                    Foto: req.session.foto, 
-                    Producto: productos_encontrados , 
-                   // Imagen: modulo.productos.detalles, 
-                  //  Texto: modulo.productos.detalles
-                    
-                })
+            .then(function(usuario) {
+                res.render('profile', {usuario: usuario})
 
 
         })

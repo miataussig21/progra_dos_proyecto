@@ -31,7 +31,13 @@ app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/product', productRouter)
 app.use('/results', searchRouter)
-
+app.use(function (req, res, next) {
+  if (req.session.user != undefined) {
+    res.locals.userLogueado = req.session.user
+  }
+  return next()
+  
+})
 
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');

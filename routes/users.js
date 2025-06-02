@@ -10,6 +10,6 @@ router.post("/logout", userController.logout)
 router.get("/register", userController.register)
 router.post('/newUser', userController.create)
 
-router.get("/profile", userController.profile)
+router.get("/profile/:id", userController.profile)
 
 module.exports = router;

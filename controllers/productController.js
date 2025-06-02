@@ -1,4 +1,3 @@
-const modulo = require("../db/modulo")
 const db = require("../database/models")
 
 
@@ -6,9 +5,18 @@ const controlador = {
   product: function(req, res, next) {
     let producto = req.params.id
 
-    db.Producto.findByPk(producto)
+    db.Producto.findByPk(producto, {
+      include: [{ association: "relacion_pc",
+        include: [{ association: "relacion_cu"}]
+      }]
+    } )
+
     .then(function(result){
-      res.render('product', {producto: result, comment: modulo.productos.comentarios});
+      return res.render(result)
+      res.render('product', {producto: result});
+    })
+    .catch(function (error) {
+      return res.send(error)
     })
   },
 	productAdd: function(req, res, next) {
