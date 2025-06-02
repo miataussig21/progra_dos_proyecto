@@ -12,12 +12,10 @@ const controlador = {
     } )
 
     .then(function(result){
-      return res.render(result)
+      
       res.render('product', {producto: result});
     })
-    .catch(function (error) {
-      return res.send(error)
-    })
+
   },
 	productAdd: function(req, res, next) {
         res.render('product-add', {Nombre: modulo.productos.comentarios[2].usuario});

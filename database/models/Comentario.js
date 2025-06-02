@@ -10,22 +10,26 @@ module.exports = function(sequelize, dataTypes){
         },
         usuarios_id: {
             type: dataTypes.INTEGER,
+            field: "usuarios_id"
             
         },
         comentario: {
             type: dataTypes.STRING
         },
-        createdAt: {
-            type: dataTypes.DATE
+        created_at: {
+            type: dataTypes.DATE,
+            field:"createdAt"
         },
-        updatedAt: {
-	        type: dataTypes.DATE
+        updated_at: {
+	        type: dataTypes.DATE,
+            field: "updatedAt"
         },
     };
 
     let config = {
         tableName: "comentarios",
         timestamps: false,
+        underscored: true,
 
     };
 

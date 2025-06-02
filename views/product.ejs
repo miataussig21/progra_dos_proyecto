@@ -27,7 +27,7 @@
 			<img src="<%= producto.relacion_pc[i].imagen %>" alt="">
 			<div class="data">	
 				<p class="user">
-				<strong> <a href="/profile/<% producto.relacion_pc[i].relacion_cu.id%>"><%= comment[i].usuario %> </a> </strong>
+				<strong> <a href="/profile/<% producto.relacion_pc[i].relacion_cu.id%>"><%= producto.relacion_pc[i].relacion_cu.email %> </a> </strong>
 				<%= producto.relacion_pc[i].comentario %></p>
 			</div>
 			</article>
