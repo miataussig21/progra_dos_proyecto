@@ -39,6 +39,9 @@ const controlador = {
 
     create: function(req, res){
 
+        console.log(req.body.fecha);
+        
+
         if (req.body.email == ""){
             res.send("Completar el campo vacio")
         }
@@ -61,7 +64,7 @@ const controlador = {
             name: req.body.usuario,
             email: req.body.email,
             contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-            fecha_de_nacimiento: req.body.fecha,
+            fecha: req.body.fecha,
         })
         .then(function(user){
             res.redirect("/login")
