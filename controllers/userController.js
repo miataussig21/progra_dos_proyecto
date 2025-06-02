@@ -19,7 +19,7 @@ const controlador = {
                 if (check == true){
 
                         req.session.user = usuario
-                        res.redirect('/')
+                        res.redirect('/profile')
                 } else {
                     res.send("La contraseña es incorrecta")
                 }
