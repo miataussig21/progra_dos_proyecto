@@ -74,7 +74,7 @@ const controlador = {
     },
     profile: function(req,res){
         db.Producto.findAll({
-            where: {usuarios_id: req.sessions.Usuario.id
+            where: {usuarios_id: req.session.Usuario.id
             }
             .then(function(productos) {
 
