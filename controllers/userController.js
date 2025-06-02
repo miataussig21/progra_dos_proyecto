@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs')
 const controlador = {
     login: function(req,res){
         res.render('login');
+
     }, 
 
     process: function(req, res){
@@ -18,8 +19,10 @@ const controlador = {
                 if (check == true){
                     res.redirect('/')
                     if (req.body.Recordarme){
-                        req.session.user = usuario;
-                    }
+                        req.session.user =  {
+                            id: usuario.id,
+                            email: usuario.email
+                    }}
                 } else {
                     res.send("La contraseña es incorrecta")
                 }
@@ -74,7 +77,7 @@ const controlador = {
     },
     profile: function(req,res){
         db.Producto.findAll({
-            where: {usuarios_id: req.sessions.usuarios.id
+            where: {usuarios_id: req.session.user.id
             }
             .then(function(productos) {
 
