@@ -3,10 +3,11 @@ const db = require("../database/models")
 
 const controlador = {
     index: function(req, res, next) {
-      db.Producto.findAll()
+      db.Producto.findAll({
+        include: [{association: 'relacion_pu'}]
+      })
       .then(function(resultados){
-          res.render('index', {producto: resultados
-          }); 
+          res.render('index', {producto: resultados}); 
         
         
       })
