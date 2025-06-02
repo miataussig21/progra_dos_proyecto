@@ -1,4 +1,12 @@
 <%- include("./partials/head.ejs") %>
+<% if (user) { %>
+	<% include("./partials/headerLogueado") %>
+  <% } else { %>
+	<% include("./partials/header") %>
+  <% } %>
+
+
+
 <%- include("./partials/header.ejs") %>
 
 <body>
