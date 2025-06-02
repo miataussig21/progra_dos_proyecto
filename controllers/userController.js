@@ -61,10 +61,10 @@ const controlador = {
             }
         })
         db.Usuario.create({
-            name: req.body.usuario,
             email: req.body.email,
             contraseña: bcrypt.hashSync(req.body.contraseña, 10),
-            fecha: req.body.fecha,
+            fecha: req.body.fecha,  
+            identificacion: req.body.documento
         })
         .then(function(user){
             res.redirect("/login")
