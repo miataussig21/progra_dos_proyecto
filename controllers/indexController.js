@@ -5,7 +5,9 @@ const controlador = {
     index: function(req, res, next) {
       db.Producto.findAll()
       .then(function(resultados){
-        res.render('index', {producto: resultados});
+          res.render('index', {producto: resultados}); 
+        
+        
       })
       }
 }

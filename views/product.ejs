@@ -1,51 +1,50 @@
-
-
 <%- include("./partials/head.ejs") %>
 <%- include("./partials/header.ejs") %>
 <body>
-	<!-- product detail -->
-	<div class="container products-wrapper">
-		<div class="d-flex align-items-center">
-			<h2 class="products-title"><%= Producto[4].nombre %></h2> 
-			<p class="product-detail-description">
-				<a href="/product/add">Editar</a>
-			</p>
-		</div>
-		<div class="product-detail">
-			<div class="row">
-				<article class="col-12 col-lg-8 product-detail-info">
-					<img src=<%= Producto[4].imagen %> alt="" class="product-detail-img">
-					<p class="product-detail-description">
-						<%= Producto[4].descripcion %></p>
-				</article>
-				<div class="col-12 col-lg-4">
-					<section class="comments">
 
-							<% for( let i = 0; i < 5 ;i++ ) { %> 
-								<article class="articulo-comments">
-								<img src="<%= comment[i].imagen %>" alt="">
-								<div class="data">	
-									<p class="user">
-									<strong> <a href="/profile"><%= comment[i].usuario %> </a> </strong>
-									 <%= comment[i].texto %></p>
-								</div>
-							</article>
-							<% } %>
-						
-					</section>
-					<form class="form" action="" method="POST">
-						<input class="form-input" type="text" value="" placeholder="Agregar comentario">
+	
+		<div class="container products-wrapper">
+			<div class="d-flex align-items-center">
+				<h2 class="products-title"><%= producto.producto %></h2> 
+				<p class="product-detail-description">
+					<a href="/product/add">Editar</a>
+				</p>
+			</div>
+			<div class="product-detail">
+				<div class="row">
+					<article class="col-12 col-lg-8 product-detail-info">
+						<img src=<%= producto.imagen %> alt="" class="product-detail-img">
+						<p class="product-detail-description">
+							<%= producto.descripcion %></p>
+					</article>
+
+
+	<div class="col-12 col-lg-4">
+		<section class="comments">
+
+		<% for( let i = 0; i < 5 ;i++ ) { %> 
+			<article class="articulo-comments">
+			<img src="<%= comment[i].imagen %>" alt="">
+			<div class="data">	
+				<p class="user">
+				<strong> <a href="/profile"><%= comment[i].usuario %> </a> </strong>
+				<%= comment[i].texto %></p>
+			</div>
+			</article>
+		<% } %>
+							
+				</section>
+				<form class="form" action="" method="POST">
+					<input class="form-input" type="text" value="" placeholder="Agregar comentario">
 						<button type="submit" class="buy-now-button">AGREGAR COMENTARIO</button>
 					</form>
-					<hr>
-				</div>
+				<hr>
 			</div>
 		</div>
 	</div>
-	<!-- /product detail -->
+	</div>
 
 <%- include("./partials/footer.ejs") %>
-
 
 </body>	
 </html>
