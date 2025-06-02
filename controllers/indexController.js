@@ -3,7 +3,10 @@ const db = require("../database/models")
 
 const controlador = {
     index: function(req, res, next) {
-        res.render('index', {producto: modulo.productos.detalles});
+      db.Producto.findAll()
+      .then(function(resultados){
+        res.render('index', {producto: resultados});
+      })
       }
 }
 
