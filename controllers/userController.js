@@ -17,12 +17,9 @@ const controlador = {
             if(usuario != null){
                 let check = bcrypt.compareSync(req.body.contraseña, usuario.contraseña)
                 if (check == true){
-                    res.redirect('/')
-                    if (req.body.Recordarme){
-                        req.session.user =  {
-                            id: usuario.id,
-                            email: usuario.email
-                    }}
+
+                        req.session.user = usuario
+                        res.redirect('/')
                 } else {
                     res.send("La contraseña es incorrecta")
                 }
@@ -31,6 +28,9 @@ const controlador = {
             }
         })
     },
+
+    //if (req.body.Recordarme){
+    //}
 
     logout: function(req, res){
         req.session.destroy();
@@ -77,17 +77,22 @@ const controlador = {
     },
     profile: function(req,res){
         db.Producto.findAll({
-            where: {usuarios_id: req.session.user.id
-            }
-            .then(function(productos) {
-
-                res.render('profile', {productos_encontrados: productos})
+            where: [{usuarios_id: req.session.user.id}]
+            
             })
+            .then(function(productos) {
+                res.render('profile', {productos_encontrados: productos,
+                    Nombre: req.session.user.email,
+                    Email: req.session.email,
+                    Foto: req.session.foto, 
+                    Producto: productos_encontrados , 
+                   // Imagen: modulo.productos.detalles, 
+                  //  Texto: modulo.productos.detalles
+                    
+                })
 
 
         })
-
-        res.render('profile', {Nombre: modulo.usuario, Email: modulo.usuario, Foto:modulo.usuario, Producto: modulo.productos, Imagen: modulo.productos.detalles, Texto: modulo.productos.detalles});
     }
 
 }
