@@ -10,15 +10,30 @@ const controlador = {
     }, 
 
     process: function(req, res){
+        console.log("hola");
+        
         db.Usuario.findOne({
             where: [{email: req.body.email}]
         })
         .then(function(usuario){
-            if(usuario != null){
+            if(usuario != undefined){
+                console.log(req.body.contraseña);
+                console.log(usuario.contraseña);
+                
+                
                 let check = bcrypt.compareSync(req.body.contraseña, usuario.contraseña)
+                console.log(check);
+                
                 if (check == true){
 
                         req.session.user = usuario
+                        
+                        if(req.body.Recordarme){
+                            res.cookie("usuarios",usuario,{maxAge: 1000 * 60 *5})
+
+                        }
+                        console.log(req.session.user);
+                        
                         res.redirect('/')
                 } else {
                     res.send("La contraseña es incorrecta")

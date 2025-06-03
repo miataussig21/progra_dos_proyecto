@@ -23,14 +23,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({secret: "los libros de Book Nest",
 resave: false,
-saveUninitialized: true}))
+saveUninitialized: true}));
 
-app.use('/', indexRouter);
-app.use('/', usersRouter);
-app.use('/product', productRouter)
-app.use('/results', searchRouter)
 app.use(function (req, res, next) {
   if (req.session.user != undefined) {
     res.locals.userLogueado = req.session.user
@@ -38,6 +35,19 @@ app.use(function (req, res, next) {
   return next()
   
 })
+app.use(function (req, res, next) {
+  if (req.session.usuario != undefined) {
+    res.cookie.usuario = req.session.usuario
+  }
+  return next()
+  
+})
+
+
+app.use('/', indexRouter);
+app.use('/', usersRouter);
+app.use('/product', productRouter)
+app.use('/results', searchRouter)
 
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');
