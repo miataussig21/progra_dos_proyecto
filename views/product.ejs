@@ -24,7 +24,7 @@
 
 		<% for( let i = 0; i < producto.relacion_pc.length ;i++ ) { %> 
 			<article class="articulo-comments">
-			<img src="<%= producto.relacion_pc[i].imagen %>" alt="">
+			<img src="<%= producto.relacion_pc[i].relacion_cu.foto %>" alt="">
 			<div class="data">	
 				<p class="user">
 				<strong> <a href="/profile/<%= producto.relacion_pc[i].relacion_cu.id%>"><%= producto.relacion_pc[i].relacion_cu.email %> </a> </strong>
