@@ -11,22 +11,22 @@
 			</div>
 			<!-- Show the "ultimos" products -->
 				<section class="container">
-					<form action="/profile" method="GET">
-						<div class="contact"><label class="form-text" for="imagen">Imagen:</label></div>
+					<form action="/nuevoProducto" method="POST">
+						<div class="contact"><label class="form-text">Imagen:</label></div>
 						<div class="contact">
-							<input id="imagen" class="imagen" type="file" name="Imagen" value="" class="form-file">
+							<input id="imagen" class="imagen" type="file" name="imagen" value="" class="form-file">
 						   <div class="usuario"></div>
 						</div>
-						<div class="contact"><label class="form-text" for="password">Nombre del producto</label></div>
+						<div class="contact"><label class="form-text">Nombre del producto</label></div>
 						<div class="contact">
-							<input id="Producto" type="text" name="Producto" value="" class="form-input">
+							<input id="producto" type="text" name="producto" value="" class="form-input">
 							<div class="password"></div>
 						</div>
 						<div class="contact">
 							<label class="form-text" for="usuario">Descripcion:</label>
 						</div>
 						<div class="contact">
-							<input id="Descripción" type="text" name="Descripción" value="" class="form-input">
+							<input id="descripcion" type="text" name="descripcion" value="" class="form-input">
 						</div>
 						<div class="contact">
 							<button class="send" type="submit">ENVIAR</button>
