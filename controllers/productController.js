@@ -41,6 +41,27 @@ const controlador = {
 	productAdd: function(req, res, next) {
       res.render('product-add');
   },
+
+  cargandoComentario: function (req, res, next) {
+    if (!req.session.user) {
+      return res.send("Tenes que estar logueado para comentar");
+    }
+    else{
+      db.Comentario.create({
+        usuarios_id: req.session.user.id,
+        producto_id: req.params.id,
+        comentario: req.body.comment
+
+      
+      })
+      .then(function(result){
+        res.redirect(`/product/${req.params.id}`);
+      }) 
+
+    }
+    
+    
+  }
 }
 
 module.exports = controlador;
