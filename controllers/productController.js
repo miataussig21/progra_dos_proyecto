@@ -18,7 +18,7 @@ const controlador = {
 
   },
 	productAdd: function(req, res, next) {
-        res.render('product-add', {Nombre: modulo.productos.comentarios[2].usuario});
+        res.render('product-add');
       },
 }
 
